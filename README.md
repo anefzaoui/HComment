@@ -22,7 +22,39 @@ In both those cases Facebook compares the result (whether be it a capital letter
 
 So that is the approach I decided to take, simply because it made the most sense to me out of all the implementations, even though Twitter does only show a list of potential usernames with rule number 2.
 
-## Usage
+## Code
+
+The JavaScript code is mostly written using the ES6 specifications, and Babel is used to compile it down to JavaScript that browsers understand.
+
+The module's code resides in `app/api/HComment.js`. Although the style of the components is in `public/style/comment.css`.
+
+The data used as names, usernames, and avatars are in `public/data/data.json`.
+
+We use WebPack to bundle all the code into one file `bundle.js` that is later imported with a script tag into the web page.
+
+Code is not minified, still readable, and `devtool: '#cheap-source-map'` is added into the WebPack config file so when the browser devtools propmt an error or a log, developer can debug right through the original files `app.js` and `HComment.js` instead of the final bundle.
+
+## Try it out
+
+To try the demo in this nodejs app:
+1. Clone/Download this repo
+2. Install the dependencies with `npm install` from within the directory
+3. Run `node server.js` then go to `http://localhost:3000`.
+
+A shopping widget will appear and at the bottom a comment field.
+
+Try writing `Mic` or `Hello @Nic`. For more examples check out the `data.json` file.
+
+## Screenshots
+
+![Screenshot 1](screenshots/1.png)
+
+![Screenshot 1](screenshots/2.png)
+
+![Screenshot 1](screenshots/3.png)
+
+
+## API Usage
 
 The current version of the code requires adding this DOM to the HTML file first:
 
@@ -62,6 +94,13 @@ For starters, most implementations on the web by major websites apply username a
 
 By taking the path of an editable `div`, we start to dive in browser API implementations that are either exclusive to one or two browsers, or never standardized, this makes workarounds and (dirty) hacks a must.
 
+### Too many edge cases.
+This module is obviously incomplete, mainly because of all the use cases that can't all be handled in one sitting.
+Example of edge cases are:
+- The user types `@` but instead of writing a user name, they move the cursor behind the sign and start writing. In the program's mind the `@` has been declared, so unless a stopping condition occurs, whatever input added is to be tested against the database of names.
+
 ## What could be done better
 
 - Making the whole module React-based/frameworkX-based for easier integration with websites that use such frameworks, and for a cleaner code.
+
+- Testing. Functional, and Unit tests.
