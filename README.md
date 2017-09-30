@@ -37,9 +37,11 @@ Code is not minified, still readable, and `devtool: '#cheap-source-map'` is adde
 ## Try it out
 
 To try the demo in this nodejs app:
+
 1. Clone/Download this repo
 2. Install the dependencies with `npm install` from within the directory
-3. Run `node server.js` then go to `http://localhost:3000`.
+3. Run `./node_modules/webpack/bin/webpack.js && node server.js`
+4. Go to `http://localhost:3000`.
 
 A shopping widget will appear and at the bottom a comment field.
 
@@ -52,7 +54,6 @@ Try writing `Mic` or `Hello @Nic`. For more examples check out the `data.json` f
 ![Screenshot 1](screenshots/2.png)
 
 ![Screenshot 1](screenshots/3.png)
-
 
 ## API Usage
 
@@ -69,14 +70,14 @@ the id `commentBox1` can be whatever the developer desires, this is because the 
 
 **Next** is creating a new instance of `HComment` and firing the `init` function.
 
-```js
+```javascript
 let comment = new HComment();
 comment.init('commentBox1');
 ```
 
 It is advised to wrap them in an event listener that waits for the page DOM to complete loading. So the result would be
 
-```js
+```javascript
 document.addEventListener('DOMContentLoaded', function _loaded() {
   document.removeEventListener('DOMContentLoaded', _loaded);
   let comment = new HComment();
@@ -95,8 +96,9 @@ For starters, most implementations on the web by major websites apply username a
 By taking the path of an editable `div`, we start to dive in browser API implementations that are either exclusive to one or two browsers, or never standardized, this makes workarounds and (dirty) hacks a must.
 
 ### Too many edge cases.
-This module is obviously incomplete, mainly because of all the use cases that can't all be handled in one sitting.
-Example of edge cases are:
+
+This module is obviously incomplete, mainly because of all the use cases that can't all be handled in one sitting. Example of edge cases are:
+
 - The user types `@` but instead of writing a user name, they move the cursor behind the sign and start writing. In the program's mind the `@` has been declared, so unless a stopping condition occurs, whatever input added is to be tested against the database of names.
 
 ## What could be done better
@@ -104,3 +106,5 @@ Example of edge cases are:
 - Making the whole module React-based/frameworkX-based for easier integration with websites that use such frameworks, and for a cleaner code.
 
 - Testing. Functional, and Unit tests.
+
+- Arrow keys movement through the list of results.

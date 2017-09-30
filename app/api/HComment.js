@@ -23,6 +23,10 @@ export default class HComment {
     this.currentCaretPos = 0;
   }
 
+  /**
+   * A hack of selecting nothing to give us the current position
+   * of the cursor aka caret.
+   */
   getCaretPosition() {
     let savedRange;
     // Works in Firefox, Chrome, Opera, Safari, and IE9+
@@ -34,7 +38,9 @@ export default class HComment {
     }
     return savedRange.endOffset;
   }
-
+  /**
+   * adding the clicked on name to the comment field.
+   */
   addNick(name, uInput) {
     /**
      * A long string with something like @str being written
@@ -86,10 +92,17 @@ export default class HComment {
     }
   }
 
+  /**
+   * Search through the data and return the result from the user's input.
+   */
   filterContent(arr, searchKey) {
     return arr.filter(obj => Object.keys(obj).some(key => obj[key].includes(searchKey)));
   }
 
+  /**
+   * attaching event listener for keyboard typing to
+   * eventually detect the `@` sign and other related logic.
+   */
   attachEventListeners() {
     let self = this;
 
