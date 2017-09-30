@@ -1,0 +1,87 @@
+/* comment box layout */
+
+.comment-box-container {
+  background-color: #fbfbfb;
+  border-top: 1px solid #efefef;
+  padding: 10px 0;
+}
+
+.comment-box {
+  width: 500px;
+  border-radius: 16px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  z-index: 2;
+  position: relative;
+  margin: 10px auto;
+}
+
+.comment {
+  background-color: transparent;
+  font-size: 13px;
+  padding: 10px 16px;
+}
+
+
+/* user mention list */
+
+.mention-list {
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  border: 1px solid #c5d1dc;
+  z-index: 3;
+  padding: 5px 0;
+  display: none;
+}
+
+.user-suggestion {
+  height: 40px;
+  width: 100%;
+  color: rgb(45, 45, 45);
+  cursor: pointer;
+}
+
+.user-suggestion:hover {
+  background-color: #474956;
+  color: white;
+}
+
+.user-suggestion .user-photo-s {
+  display: block;
+  float: left;
+  width: 40px;
+  height: 100%;
+}
+
+.user-suggestion .user-photo-s img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.user-suggestion .user-details-s {
+  float: left;
+  height: 100%;
+  width: 270px;
+}
+
+.user-suggestion .user-details-s .user-name-s {
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.user-suggestion .user-details-s .user-nick-s {
+  font-size: 12px;
+  margin-top: 1px;
+}
+
+.selected-nick {
+  background-color: #898ca5;
+  color: white;
+  padding: 0 1px;
+}

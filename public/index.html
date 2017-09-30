@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hypothesis</title>
+  <meta name="description" content="HTML5 boilerplate created with the CLI by Lazyend">
+  <meta name="author" content="">
+  <link href="style/main.css" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/comment.css" rel="stylesheet">
+  <link href="style/normalize.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <!-- ============ ITEMS ============ -->
+
+  <div class="items-wrapper">
+    <div class="item">
+      <div class="item-photo">
+        <img src="https://thefancy-media-ec1.thefancy.com/1280/20170818/1490317411264502559_7b86170dc1fb.jpg" />
+      </div>
+      <div class="item-seller">
+        <div class="item-seller-inner">
+          <div class="seller-photo">
+            <img src="https://scontent.ftun1-1.fna.fbcdn.net/v/t1.0-9/21272359_10155684263514806_4999287767159182085_n.jpg?oh=03adde82233b5f0b7413bf71f354a8ba&oe=5A5D3650" />
+          </div>
+          <div class="seller-user">
+            <a class="username" href="#">Ahmed Nefzaoui</a>
+            <a class="item-link-time" href="#">Tuesday, Oct 5. 6:37 PM</a>
+          </div>
+          <h4 class="product-price"><span class="price-figure">19.99 USD</span></h4>
+        </div>
+      </div>
+      <div class="item-action-price">
+        <div class="item-action-price-inner">
+          <div class="user-action">
+            <button class="like hvr-underline-from-center"><i class="fa fa-heart" aria-hidden="true"></i>Like</button>
+          </div>
+          <div class="user-action">
+            <button class="buy hvr-underline-from-center"><i class="fa fa-cart-plus" aria-hidden="true"></i>Buy</button>
+          </div>
+          <div class="buy-title">
+            <h3 class="">300 Views. 128 Likes.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="item-description">
+        <span>
+          <b class="p-title">Casque BLUETOOTH JBL EVEREST + lecteur carte mémoire</b>
+          <p class="read-more">
+            Livraison à domicile frais 6d
+            <input type="checkbox" class="read-more-state" id="post-1" />
+            <span class="read-more-text">
+              <br/>اختار اش تحب و اعمل آفار. أسوام هبال و تخفيضات توصل ل 45 %
+              <br/>كميّات محدودة و مدّة العرض محدودة....
+              <br/>Des promos fous et des remises allant jusqu'à 45%
+              <br/>Profitez vite ... Quantités limités ...
+              <br/>Visitez notre site www.electrohaddad.tn et profitez de nos promos exceptionnelles.
+              <br/>Pour valider vos commandes par msg sur Facebook :
+              <br/>► 1- Envoyez le lien de l'article choisis ou sa photo
+              <br/>► 2- Votre adresse au complet ainsi que votre num de téléphone
+              <br/>► 3- Votre commande vous sera envoyé en livraison à domicile dans un délais de 72H
+              <br/>► 4-Payement à la réception de votre colis
+              <br/>Pour plus de renseignements veuillez contacter notre service client : 50809660
+            </span>
+        <label for="post-1" class="read-more-trigger"></label>
+        </p>
+        </span>
+      </div>
+
+      <!-- comment box -->
+      <div class="comment-box-container">
+        <div class="comment-box" id="commentBox1">
+          <div class="comment" id="commentField" contenteditable="true"></div>
+          <div class="mention-list" id="mentionList"></div>
+        </div>
+      </div>
+      <!-- end comment box -->
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+
+</html>
